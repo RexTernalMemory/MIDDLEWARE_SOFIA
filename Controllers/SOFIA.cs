@@ -254,18 +254,15 @@ SBOR_LAST_SCHOOL);
             }
         }
 
-        [HttpGet("TransferDataToNexus/{LAN}")]
-        public async Task<IActionResult> TransferDataToNexus(string LAN)
+        [HttpPost("TransferDataToNexus")]
+        public async Task<IActionResult> TransferDataToNexus([FromBody] NexusLAN NL)
         {
             try
             {
-                var group = await dbContext.DataFromSofia
-                    .FromSqlRaw("EXEC [dbo].[XTABLE_GET] " + LAN)
+                var DATA = await dbContext.DataFromSofia
+                    .FromSqlRaw("EXEC [dbo].[XTABLE_GET] " + NL.LAN)
                     .ToListAsync();
-                return Ok(new
-                {
-                    status = group
-                });
+                return Ok(DATA);
             }
             catch (Exception ex)
             {
