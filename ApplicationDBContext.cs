@@ -8,6 +8,6 @@ namespace SOFIA
     {
         public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) : base(options) { }
 
-        public DbSet<TEST> TEST { get; set; }
+        public DbSet<DataFromSofia> DataFromSofia { get; set; }
     }
 }

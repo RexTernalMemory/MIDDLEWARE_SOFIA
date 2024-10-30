@@ -2,7 +2,7 @@
 
 namespace SOFIA.Model
 {
-    public class TEST
+    public class DataFromSofia
     {
         [Key]
         public string PN_NUMBER { get; set; }

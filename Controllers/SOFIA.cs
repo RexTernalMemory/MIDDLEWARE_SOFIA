@@ -92,77 +92,77 @@ namespace SOFIA.Controllers
                 var SBOR_COURSE = new SqlParameter("@ND_SBOR_COURSE", DFN.SBOR_COURSE);
                 var SBOR_LAST_SCHOOL = new SqlParameter("@ND_SBOR_LAST_SCHOOL", DFN.SBOR_LAST_SCHOOL);
                 await dbContext.Database.ExecuteSqlRawAsync("EXEC [dbo].[XTABLE_INSERT] " +
-                  "@Company = ND_Company," +
-                  "@BRANCH_NAME = ND_BRANCH_NAME," +
-                  "@APPL_CRM_CODE = ND_APPL_CRM_CODE," +
-                  "@LAST_NAME = ND_LAST_NAME," +
-"@FIRST_NAME = ND_FIRST_NAME," +
-"@MIDDLE_NAME = ND_MIDDLE_NAME," +
-"@SUFFIX = ND_SUFFIX," +
-"@BIRTH_DATE = ND_BIRTH_DATE," +
-"@APPL_AMOUNT_APPLIED = ND_APPL_AMOUNT_APPLIED," +
-"@APPL_TERMS_APPLIED = ND_APPL_TERMS_APPLIED," +
-"@APPL_DATE_APPLIED = ND_APPL_DATE_APPLIED," +
-"@PRODUCT_NAME = ND_PRODUCT_NAME," +
-"@ADDRESS = ND_ADDRESS," +
-"@AREA = ND_AREA," +
-"@LENGTH_STAY = ND_LENGTH_STAY," +
-"@MOBILENO = ND_MOBILENO," +
-"@EMAIL = ND_EMAIL," +
-"@AO_LAST_NAME = ND_AO_LAST_NAME," +
-"@AO_FIRST_NAME = ND_AO_FIRST_NAME," +
-"@AO_MIDDLE_NAME = ND_AO_MIDDLE_NAME," +
-"@AO_SUFFIX = ND_AO_SUFFIX," +
-"@CREMAN_LAST_NAME = ND_CREMAN_LAST_NAME," +
-"@CREMAN_FIRST_NAME = ND_CREMAN_FIRST_NAME," +
-"@CREMAN_MIDDLE_NAME = ND_CREMAN_MIDDLE_NAME," +
-"@CREMAN_SUFFIX = ND_CREMAN_SUFFIX," +
-"@MKTG_LAST_NAME = ND_MKTG_LAST_NAME," +
-"@MKTG_FIRST_NAME = ND_MKTG_FIRST_NAME," +
-"@MKTG_MIDDLE_NAME = ND_MKTG_MIDDLE_NAME," +
-"@MKTG_SUFFIX = ND_MKTG_SUFFIX," +
-"@LOANS_LAST_NAME = ND_LOANS_LAST_NAME," +
-"@LOANS_FIRST_NAME = ND_LOANS_FIRST_NAME," +
-"@LOANS_MIDDLE_NAME = ND_LOANS_MIDDLE_NAME," +
-"@LOANS_SUFFIX = ND_LOANS_SUFFIX," +
-"@APPL_AMOUNT_APPROVED = ND_APPL_AMOUNT_APPROVED," +
-"@APPL_TERMS_APPROVED = ND_APPL_TERMS_APPROVED," +
-"@APPL_AMOUNT_ACQUIRED = ND_APPL_AMOUNT_ACQUIRED," +
-"@APPL_AGENCY = ND_APPL_AGENCY," +
-"@APPL_COUNTRY_DESTI = ND_APPL_COUNTRY_DESTI," +
-"@APPL_TYPE = ND_APPL_TYPE," +
-"@BORR_CIVIL_STATUS = ND_BORR_CIVIL_STATUS," +
-"@BORR_GENDER = ND_BORR_GENDER," +
-"@BORR_EDUCATION = ND_BORR_EDUCATION," +
-"@BORR_COURSE = ND_BORR_COURSE," +
-"@BORR_LAST_SCHOOL = ND_BORR_LAST_SCHOOL," +
-"@AGNT_LASTNAME = ND_AGNT_LASTNAME," +
-"@AGNT_FIRST_NAME = ND_AGNT_FIRST_NAME," +
-"@AGNT_MIDDLENAME = ND_AGNT_MIDDLENAME," +
-"@AGNT_SUFFIX = ND_AGNT_SUFFIX," +
-"@AGNT_BIRTHDATE = ND_AGNT_BIRTHDATE," +
-"@AGNT_MOBILENO = ND_AGNT_MOBILENO," +
-"@AGNT_AGENT_REGDATE = ND_AGNT_AGENT_REGDATE," +
-"@CoBORR1_LAST_NAME = ND_CoBORR1_LAST_NAME," +
-"@CoBORR1_FIRST_NAME = ND_CoBORR1_FIRST_NAME," +
-"@CoBORR1_MIDDLE_NAME = ND_CoBORR1_MIDDLE_NAME," +
-"@CoBORR1_SUFFIX = ND_CoBORR1_SUFFIX," +
-"@CoBORR1_BIRTH_DATE = ND_CoBORR1_BIRTH_DATE," +
-"@CoBORR1_CIVIL_STATUS = ND_CoBORR1_CIVIL_STATUS," +
-"@CoBORR1_GENDER = ND_CoBORR1_GENDER," +
-"@CoBORR1_ADDRESS = ND_CoBORR1_ADDRESS," +
-"@CoBORR1_LENGTH_STAY = ND_CoBORR1_LENGTH_STAY," +
-"@CoBORR1_TELNO = ND_CoBORR1_TELNO," +
-"@CoBORR1_EMAIL = ND_CoBORR1_EMAIL," +
-"@SBOR_LAST_NAME = ND_SBOR_LAST_NAME," +
-"@SBOR_FIRST_NAME = ND_SBOR_FIRST_NAME," +
-"@SBOR_MIDDLE_NAME = ND_SBOR_MIDDLE_NAME," +
-"@SBOR_SUFFIX = ND_SBOR_SUFFIX," +
-"@SBOR_GENDER = ND_SBOR_GENDER," +
-"@SBOR_BIRTH_DATE = ND_SBOR_BIRTH_DATE," +
-"@SBOR_EDUCATION = ND_SBOR_EDUCATION," +
-"@SBOR_COURSE = ND_SBOR_COURSE," +
-"@SBOR_LAST_SCHOOL = ND_SBOR_LAST_SCHOOL",
+                 "@Company = @ND_Company," +
+"@BRANCH_NAME = @ND_BRANCH_NAME," +
+"@APPL_CRM_CODE = @ND_APPL_CRM_CODE," +
+"@LAST_NAME = @ND_LAST_NAME," +
+"@FIRST_NAME = @ND_FIRST_NAME," +
+"@MIDDLE_NAME = @ND_MIDDLE_NAME," +
+"@SUFFIX = @ND_SUFFIX," +
+"@BIRTH_DATE = @ND_BIRTH_DATE," +
+"@APPL_AMOUNT_APPLIED = @ND_APPL_AMOUNT_APPLIED," +
+"@APPL_TERMS_APPLIED = @ND_APPL_TERMS_APPLIED," +
+"@APPL_DATE_APPLIED = @ND_APPL_DATE_APPLIED," +
+"@PRODUCT_NAME = @ND_PRODUCT_NAME," +
+"@ADDRESS = @ND_ADDRESS," +
+"@AREA = @ND_AREA," +
+"@LENGTH_STAY = @ND_LENGTH_STAY," +
+"@MOBILENO = @ND_MOBILENO," +
+"@EMAIL = @ND_EMAIL," +
+"@AO_LAST_NAME = @ND_AO_LAST_NAME," +
+"@AO_FIRST_NAME = @ND_AO_FIRST_NAME," +
+"@AO_MIDDLE_NAME = @ND_AO_MIDDLE_NAME," +
+"@AO_SUFFIX = @ND_AO_SUFFIX," +
+"@CREMAN_LAST_NAME = @ND_CREMAN_LAST_NAME," +
+"@CREMAN_FIRST_NAME = @ND_CREMAN_FIRST_NAME," +
+"@CREMAN_MIDDLE_NAME = @ND_CREMAN_MIDDLE_NAME," +
+"@CREMAN_SUFFIX = @ND_CREMAN_SUFFIX," +
+"@MKTG_LAST_NAME = @ND_MKTG_LAST_NAME," +
+"@MKTG_FIRST_NAME = @ND_MKTG_FIRST_NAME," +
+"@MKTG_MIDDLE_NAME = @ND_MKTG_MIDDLE_NAME," +
+"@MKTG_SUFFIX = @ND_MKTG_SUFFIX," +
+"@LOANS_LAST_NAME = @ND_LOANS_LAST_NAME," +
+"@LOANS_FIRST_NAME = @ND_LOANS_FIRST_NAME," +
+"@LOANS_MIDDLE_NAME = @ND_LOANS_MIDDLE_NAME," +
+"@LOANS_SUFFIX = @ND_LOANS_SUFFIX," +
+"@APPL_AMOUNT_APPROVED = @ND_APPL_AMOUNT_APPROVED," +
+"@APPL_TERMS_APPROVED = @ND_APPL_TERMS_APPROVED," +
+"@APPL_AMOUNT_ACQUIRED = @ND_APPL_AMOUNT_ACQUIRED," +
+"@APPL_AGENCY = @ND_APPL_AGENCY," +
+"@APPL_COUNTRY_DESTI = @ND_APPL_COUNTRY_DESTI," +
+"@APPL_TYPE = @ND_APPL_TYPE," +
+"@BORR_CIVIL_STATUS = @ND_BORR_CIVIL_STATUS," +
+"@BORR_GENDER = @ND_BORR_GENDER," +
+"@BORR_EDUCATION = @ND_BORR_EDUCATION," +
+"@BORR_COURSE = @ND_BORR_COURSE," +
+"@BORR_LAST_SCHOOL = @ND_BORR_LAST_SCHOOL," +
+"@AGNT_LASTNAME = @ND_AGNT_LASTNAME," +
+"@AGNT_FIRST_NAME = @ND_AGNT_FIRST_NAME," +
+"@AGNT_MIDDLENAME = @ND_AGNT_MIDDLENAME," +
+"@AGNT_SUFFIX = @ND_AGNT_SUFFIX," +
+"@AGNT_BIRTHDATE = @ND_AGNT_BIRTHDATE," +
+"@AGNT_MOBILENO = @ND_AGNT_MOBILENO," +
+"@AGNT_AGENT_REGDATE = @ND_AGNT_AGENT_REGDATE," +
+"@CoBORR1_LAST_NAME = @ND_CoBORR1_LAST_NAME," +
+"@CoBORR1_FIRST_NAME = @ND_CoBORR1_FIRST_NAME," +
+"@CoBORR1_MIDDLE_NAME = @ND_CoBORR1_MIDDLE_NAME," +
+"@CoBORR1_SUFFIX = @ND_CoBORR1_SUFFIX," +
+"@CoBORR1_BIRTH_DATE = @ND_CoBORR1_BIRTH_DATE," +
+"@CoBORR1_CIVIL_STATUS = @ND_CoBORR1_CIVIL_STATUS," +
+"@CoBORR1_GENDER = @ND_CoBORR1_GENDER," +
+"@CoBORR1_ADDRESS = @ND_CoBORR1_ADDRESS," +
+"@CoBORR1_LENGTH_STAY = @ND_CoBORR1_LENGTH_STAY," +
+"@CoBORR1_TELNO = @ND_CoBORR1_TELNO," +
+"@CoBORR1_EMAIL = @ND_CoBORR1_EMAIL," +
+"@SBOR_LAST_NAME = @ND_SBOR_LAST_NAME," +
+"@SBOR_FIRST_NAME = @ND_SBOR_FIRST_NAME," +
+"@SBOR_MIDDLE_NAME = @ND_SBOR_MIDDLE_NAME," +
+"@SBOR_SUFFIX = @ND_SBOR_SUFFIX," +
+"@SBOR_GENDER = @ND_SBOR_GENDER," +
+"@SBOR_BIRTH_DATE = @ND_SBOR_BIRTH_DATE," +
+"@SBOR_EDUCATION = @ND_SBOR_EDUCATION," +
+"@SBOR_COURSE = @ND_SBOR_COURSE," +
+"@SBOR_LAST_SCHOOL = @ND_SBOR_LAST_SCHOOL",
 Company,
 BRANCH_NAME,
 APPL_CRM_CODE,
@@ -244,6 +244,7 @@ SBOR_LAST_SCHOOL);
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.ToString());
                 return BadRequest(new
                 {
                     status = "error",
@@ -253,13 +254,13 @@ SBOR_LAST_SCHOOL);
             }
         }
 
-        [HttpGet("Test/{DATA}")]
-        public async Task<IActionResult> Testing(string DATA)
+        [HttpGet("TransferDataToNexus/{LAN}")]
+        public async Task<IActionResult> TransferDataToNexus(string LAN)
         {
             try
             {
-                var group = await dbContext.TEST
-                    .FromSqlRaw("EXEC [dbo].[XTABLE_GET] " + DATA)
+                var group = await dbContext.DataFromSofia
+                    .FromSqlRaw("EXEC [dbo].[XTABLE_GET] " + LAN)
                     .ToListAsync();
                 return Ok(new
                 {
@@ -276,28 +277,5 @@ SBOR_LAST_SCHOOL);
                 });
             }
         }
-
-        /*  [HttpPost("Test_Insert")]
-          public async Task<IActionResult> Test_Insert([FromBody] DataFromNexus DFN)
-          {
-              try
-              {
-                  //var USER = new SqlParameter("@DATA", DFN.DATA);
-                  await dbContext.Database.ExecuteSqlRawAsync("EXEC [dbo].[XTABLE_INSERT] " + DFN.DATA);
-                  return Ok(new
-                  {
-                      status = "WORKING"
-                  });
-              }
-              catch (Exception ex)
-              {
-                  return BadRequest(new
-                  {
-                      status = "error",
-                      message = "Something went wrong",
-                      description = ex.Message
-                  });
-              }
-          }*/
     }
 }
