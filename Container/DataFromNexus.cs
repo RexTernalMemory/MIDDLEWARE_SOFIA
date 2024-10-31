@@ -73,5 +73,15 @@
         public string SBOR_EDUCATION { get; set; }
         public string SBOR_COURSE { get; set; }
         public string SBOR_LAST_SCHOOL { get; set; }
+
+        public string WBOR_EMPLOYMENT { get; set; }
+        public string WBOR_ADDRESS1 { get; set; }
+        public decimal WBOR_MONTHLY_INCOME { get; set; }
+
+        public decimal APPL_INTERESTRATE_APPROVED { get; set; }
+        public decimal APPL_TERMS_ACQUIRED { get; set; }
+        public decimal APPL_INTERESTRATE_ACQUIRED { get; set; }
+        public string APPL_PAYMENT_MODE { get; set; }
+        public int APPL_GRACE_PERIOD { get; set; }
     }
 }
